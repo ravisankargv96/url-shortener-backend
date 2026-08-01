@@ -195,11 +195,11 @@ To demonstrate versatility, the AI-assisted workflow was applied across three di
 ## 6. Setup & Evaluation Instructions
 Evaluating this AI-assisted solution locally is straightforward. The project utilizes native Maven wrappers so external dependency management is minimized.
 
-### 📋 Prerequisites
+### Prerequisites
 1. **Java 17:** Ensure the JDK is installed and configured in your system `PATH`.
 2. **PostgreSQL / NeonDB:** You must have a relational database available to mount the tables. 
 
-### ⚙️ Environment Configuration
+### Environment Configuration
 Populate the required environment variables. You can inject these via a `.env` file, your IDE's Run Configuration, or by directly modifying `src/main/resources/application.properties`.
 ```properties
 DATABASE_URL=jdbc:postgresql://<your-db-host>:<port>/<db-name>
@@ -210,7 +210,7 @@ JWT_EXPIRATION=86400000
 FRONTEND_URL=http://localhost:3000
 ```
 
-### ▶️ Running the Application
+### Running the Application
 From the root directory (`url-shortener-sb`), execute the Spring Boot application using Maven:
 ```bash
 # Windows
@@ -220,7 +220,7 @@ From the root directory (`url-shortener-sb`), execute the Spring Boot applicatio
 ./mvnw spring-boot:run
 ```
 
-### 🧪 Executing the Test Suite
+### Executing the Test Suite
 To validate the engineer-owned Unit Tests verifying boundary limits and DB constraints (like character limits and collision handlers):
 ```bash
 # Windows
@@ -230,8 +230,8 @@ To validate the engineer-owned Unit Tests verifying boundary limits and DB const
 ./mvnw test
 ```
 
-### 📖 Accessing the API Documentation
+### Accessing the API Documentation
 Once the server binds successfully to port `8080`, navigate to the following URL in any web browser to access the auto-generated Swagger UI contracts: 
-👉 [**http://localhost:8080/swagger-ui.html**](http://localhost:8080/swagger-ui.html) 
+[**http://localhost:8080/swagger-ui.html**](http://localhost:8080/swagger-ui.html) 
 
 *From this interface, you can register a dummy user via `/api/auth/register`, login to grab a Bearer token via `/api/auth/login`, and safely hit the secured `/api/urls/shorten` endpoints.*

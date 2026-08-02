@@ -2,8 +2,8 @@ package com.url.shortener.security;
 
 import com.url.shortener.security.jwt.JwtAuthenticationFilter;
 import com.url.shortener.service.UserDetailsServiceImpl;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -22,7 +22,6 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.List;
-import java.util.Arrays;
 
 /**
  * Main security configuration class for the application.
@@ -36,9 +35,9 @@ public class WebSecurityConfig {
 
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
-
-    @Value("${frontend.url}")
-    private String frontendUrl;
+    
+    // @Value("${frontend.url}")
+    // private String frontendUrl;
 
     /**
      * Initializes the custom JWT Authentication filter.
@@ -120,7 +119,8 @@ public class WebSecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of(frontendUrl));
+        // configuration.setAllowedOrigins(List.of(frontendUrl));
+        configuration.setAllowedOriginPatterns(List.of("*"));
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
         configuration.setAllowCredentials(true);

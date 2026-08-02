@@ -14,15 +14,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
-    @Value("${frontend.url}")
-    private String frontendUrl;
+    /*@Value("${frontend.url}")
+    private String frontendUrl;*/
 
     /**
      * Defines global CORS mappings using WebMvcConfigurer.
      * 
      * @return a customized WebMvcConfigurer bean instance
      */
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer(){
         return new WebMvcConfigurer() {
             @Override
@@ -35,5 +35,5 @@ public class WebConfig implements WebMvcConfigurer {
                         .maxAge(3600);
             }
         };
-    }
+    }*/
 }

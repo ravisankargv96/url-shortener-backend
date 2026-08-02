@@ -232,6 +232,6 @@ To validate the engineer-owned Unit Tests verifying boundary limits and DB const
 
 ### Accessing the API Documentation
 Once the server binds successfully to port `8080`, navigate to the following URL in any web browser to access the auto-generated Swagger UI contracts: 
-[**http://localhost:8080/swagger-ui.html**](http://localhost:8080/swagger-ui.html) 
+[**https://url-shortener-backend-72aq.onrender.com/swagger-ui.html**](https://url-shortener-backend-72aq.onrender.com/swagger-ui.html) 
 
 *From this interface, you can register a dummy user via `/api/auth/register`, login to grab a Bearer token via `/api/auth/login`, and safely hit the secured `/api/urls/shorten` endpoints.*
